@@ -1,0 +1,87 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Courier New';
+	box-sizing: border-box;
+}
+
+.parent{
+    height: 100vh;
+    background-color: rgb(218, 199, 199);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: "logo logo nav nav nav nav nav nav nav nav"
+                          "side side cont cont cont cont cont cont cont cont"
+                          "foot foot foot foot foot foot foot foot foot foot";
+}
+
+h1{
+    grid-area: logo;
+    background-color: grey;
+    text-align: center;
+    font-family: cursive;
+    color: white;
+}
+
+nav{
+    grid-area: nav;
+    background-color: darkgrey;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    color: #ccbbee;
+    padding: 6px 10px;
+    font-size: 17px;
+}
+nav ul li a.active{
+    text-decoration-color: saddlebrown;
+    color: saddlebrown;
+}
+nav ul li a:hover{
+    background-color: khaki;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+section{
+    grid-area: cont;
+    background-color: white;
+    text-align: center;
+    
+}
+section .container{
+    width: 90%;
+    margin: 30px auto;
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    grid-template-rows: repeat(10 ,100px);
+    gap: 5px 5px;
+}
+section .container .card{
+    background-color: rgba(99, 116, 99,0.7);
+}
+
+aside{
+    grid-area: side;
+    background-color: gray;
+    text-align: center;
+}
+
+footer{
+    grid-area: foot;
+    background-color: darkgray;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}

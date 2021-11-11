@@ -1,0 +1,96 @@
+/* start basics */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier;
+    box-sizing: border-box;
+}
+.parent{
+    width: 100%;
+    height: 100vh;
+    /* margin: 60px auto; */
+    background: #558844;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    gap: 10px;
+    grid-template-areas: "logo logo nav nav nav nav nav nav nav nav" 
+                        "side side cont cont cont cont cont cont cont cont"
+                        "side side cont cont cont cont cont cont cont cont"
+                        "side side cont cont cont cont cont cont cont cont"
+                        "side side cont cont cont cont cont cont cont cont"
+                        "side side cont cont cont cont cont cont cont cont"
+                        "side side cont cont cont cont cont cont cont cont"
+                        "side side cont cont cont cont cont cont cont cont"
+                        "side side cont cont cont cont cont cont cont cont"
+                        "foot foot foot foot foot foot foot foot foot foot";
+}
+/* end basics */
+
+/* start my-framework */
+.parent .child{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: rgb(194, 170, 170);
+    color: #fff;
+}
+/* end my-framework */
+
+/* start logo */
+.parent .logo{
+    grid-area: logo;
+    background: #0a494181;
+}
+.parent .logo h1{
+    font-size: 25px;
+    font-family: cursive;
+}
+/* end logo */
+
+/* start navbar */
+.parent .navbar{
+    grid-area: nav;
+    background: #eeff0088;
+}
+.parent .navbar ul{
+    list-style: none;
+}
+.parent .navbar ul li{
+    display: inline-block;
+}
+.parent .navbar ul li a{
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 7px 10px;
+    transition: 0.2s;
+}
+.parent .navbar ul li a:hover{
+    background: #0033ff;
+    color: #fff;
+    border: 0;
+    border-radius: 25px;
+}
+/* end navbar */
+
+/* start sidebar */
+.parent .sidebar{
+    grid-area: side;
+    background: #0e0b0b88;
+}
+/* end sidebar */
+
+/* start content */
+.parent .content{
+    grid-area: cont;
+    background: #4c415881;
+}
+/* end content */
+
+/* start footer */
+.parent .footer{
+    grid-area: foot;
+    background: #76cf607e;
+}
+/* end footer */
